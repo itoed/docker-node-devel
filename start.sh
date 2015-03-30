@@ -9,4 +9,6 @@ sed -i 's/PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_c
 
 su -c "npm install --prefix /home/developer/app" - developer
 
+touch /supervisord.log
+chown developer:developer /supervisord.log
 exec supervisord
